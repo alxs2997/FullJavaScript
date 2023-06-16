@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/icons8-toro-100.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | El Pueblo</title>
+    <!--iconos de fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body>
+    <!--header siempre permanecerá arriba-->
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+    </header>
+    <!--menu-->
+    <div class="menu__side" id="menu_side">
+        <!--logo-->
+        <div class="name__page">
+            <img src="img/icons8-toro-48.png" alt="">
+        </div>
+        <!--opciones del menu-->
+        <div class="options__menu">
+            <!--opciones QUE SE AGREGA EN etiqueta a para poder incorporar icono-->
+            <a href="#" class="selected">
+                <div class="option">
+                    <i class="fa fa-house-user"></i>
+                </div>
+            </a>
+            <a href="#" class="selected">
+                <div class="option">
+                    <i class="fa fa-square-pen"></i>
+                </div>
+            </a>
+            <!--Opción 3 que tengo pesado se guarde acá lo que el cliente ordene-->
+            <a href="#">
+                <div class="option" class="selected">
+                    <i class="fa fa-bell"></i>
+                </div>
+            </a>
+            <!--Opción 4-->
+            <a href="#">
+                <div class="option" class="selected">
+                    <i class="fa fa-fire"></i>
+                </div>
+            </a>
+            <!--Opción 5-->
+            <a href="#">
+                <div class="option" class="selected">
+                    <i class="fa fa-folder-user"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--contenido del menú de comidas-->
+
+    <div class="title-cards">
+        <h2>MENÚ</h2>
+        <div class="line"></div>
+        <h4>Comidas</h4>
+        <div class="line2"></div>
+    </div>
+    <div class="container-card">
+        <!--card con item 1-->
+        <div class="card">
+            <figure>
+                <img src="img/platillos/comida/Imagen de WhatsApp 2023-06-16 a las 12.09.07.jpg">
+            </figure>
+            <div class="contenido-card">
+                <h3>Combo Kids</h3>
+                <div class="precio-plato-carta">
+                    <span>$17.00</span>
+                </div>
+                <p>Incluye: 1 Hamburguesa, 5 tequeños,
+                    1 papa french y 1 refresco</p>
+                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                <a href="#">Order Now!</a>
+            </div>
+        </div>
+        <!--card con item 2-->
+        <div class="card">
+            <figure>
+                <img src="img/platillos/comida/wrapp.jpg">
+            </figure>
+            <div class="contenido-card">
+                <h3>Combo Wrap Pollo Qbano</h3>
+                <div class="precio-plato-carta">
+                    <span>$17.00</span>
+                </div>
+                <p>Pechuga de Pollo Desmechada,
+                    Tomate, Queso Mozzrella, Lechuga, y Mayonesa.</p>
+                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                <a href="#">Order Now!</a>
+            </div>
+        </div>
+        <!--card con item 3-->
+        <div class="card">
+            <figure>
+                <img src="img/platillos/comida/escalopas.jpg">
+            </figure>
+            <div class="contenido-card col-4">
+                <h3>Alcachofas con panceta ibérica y espárragos trigueros</h3>
+                <div class="precio-plato-carta">
+                    <span>$17.00</span>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias..
+                </p>
+                <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                <a href="#">Order Now!</a>
+            </div>
+        </div>
+    </div>
+    <!--contenido del menú  sección de bebidas-->
+    <div class="title-cards">
+        <h4>Bebidas</h4>
+        <div class="line2"></div>
+    </div>
+    <div class="container-card">
+        <!--card con item 1 de bebidas-->
+        <div class="card">
+            <figure>
+                <img src="img/borra.jpg">
+            </figure>
+            <div class="contenido-card col-4">
+                <h3>Cervezas Nacionales</h3>
+                <div class="precio-plato-carta">
+                    <span>$17.00</span>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias..
+                </p>
+                <a href="#">Order Now!</a>
+            </div>
+        </div>
+        <!--card con item 2 de bebidas-->
+        <div class="card">
+            <figure>
+                <img src="img/sara-cervera-xB0Kr0D0C8Y-unsplash-1-scaled-e1637796239592-1024x1024.jpg">
+            </figure>
+            <div class="contenido-card col-4">
+                <h3>Smoothies</h3>
+                <div class="precio-plato-carta">
+                    <span>$17.00</span>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias..
+                </p>
+                <a href="#">Order Now!</a>
+            </div>
+        </div>
+        <!--card con item 3 de bebidas-->
+        <div class="card">
+            <figure>
+                <img
+                    src="https://mejorconsalud.as.com/wp-content/uploads/2020/12/limonada-coco.jpg?auto=webp&quality=45&width=1920&crop=16:9,smart,safe">
+            </figure>
+            <div class="contenido-card col-4">
+                <h3>Limonada de COCO</h3>
+                <div class="precio-plato-carta">
+                    <span>$17.00</span>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias..
+                </p>
+                <a href="#">Order Now!</a>
+            </div>
+        </div>
+    </div>
+
+    <!--footer responsive-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Alxs2997 | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
