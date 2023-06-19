@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando nodos en el DOM</title>
+</head>
+<body>
+    <h1> Manipulando el DOM</h1>
+    <div class="sub" id="subtitulo"></div>
+    <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+        sunt illo necessitatibus culpa atque natus similique, placeat
+        aspernatur rem impedit aliquam eveniet sint accusamus quo aliquid
+        architecto a beatae alias!</p>
+        
+        <form action="" id="formulario">
+            <input type="text" name="nombre" id="nombre">
+            <input type="submit" value="Enviar">
+        </form>
+
+
+        <script>
+            //1. Crear un elemento
+            var elemento = document.createElement('h2');
+            //2.| Crear un nodo de texto
+            var contenido = document.createTextNode('Este es nuestro titular');
+            //3.| Añadir el nodo de texto al elemento
+            elemento.appendChild(contenido);
+            //4.| Agregar atributos al elemento
+            elemento.setAttribute('align', 'center');
+            //5.| Agregar el elemento al documento
+            document.getElementById('subtitulo').appendChild(elemento);
+
+            //luego veremos como agregar despues del elemento
+        </script>
+</body>
+</html>
