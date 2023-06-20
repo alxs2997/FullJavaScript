@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+        <li>sit amet consectetur adipisi</li>
+    </ol>
+
+    <script>
+        // Acceder a los elementos del DOM y posicionarlo en una variable
+        var elementos = document.createElement('li'),
+        //podemos anidar dos variables en una sola solo colocando una coma
+         contenido = document.createTextNode('Nuevo elemento texto');
+
+        // Añadir el contenido al elemento
+        elementos.appendChild(contenido);
+        //queremos agregar el elemento al final de la lista
+        // Acceder a la lista
+
+        var padre = document.getElementById('lista');
+        /*FORMA DOS
+        var padre = document.querySelector('li') [0].parentNodes; //acceder al primer elemento de la lista;
+        */
+        padre.appendChild(elementos);
+
+        //para agregar un elemento al inicio de la lista:
+
+        //padre.insertBefore(elementos, padre.childNodes[0]),
+        primerElemento = document.getElementsByTagName('li')[1];
+
+        padre.insertBefore(elementos, primerElemento);
+
+         //document.body.appendChild(elementos);
+        // Añadir el elemento al documento  
+    </script>
+</body>
+</html>
