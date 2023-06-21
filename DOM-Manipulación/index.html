@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atributos DOM</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: rgb(51, 54, 51);
+            color: aliceblue;
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        .azul {
+            background: #0074D9;
+            border: 1px solid black;
+        }
+
+        .rojo {
+            background: #FF4136;
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    <ol id="lista1">
-        <li>Refrescos</li>
-        <li>Leche</li>
-        <li>Arroz</li>
-        <li>Carne</li>
-    </ol>
+    <section id="contenedor">
+        <a href="https://www.google.com" id="enlace" target="_blank">Google</a>
+        <div class="">
+            <ol id="lista1">
+                <li>Refrescos</li>
+                <li>Leche</li>
+                <li>Arroz</li>
+                <li>Carne</li>
+            </ol>
+        </div>
+        <div class="">
+            <ul id="lista2">
+                <li>Juguetes</li>
+                <li>Libros</li>
+                <li>Videojuegos</li>
+                <li>Computadoras</li>
+            </ul>
+        </div>
+    </section>
 
-    <ul id="lista2">
-        <li>Juguetes</li>
-        <li>Libros</li>
-        <li>Videojuegos</li>
-        <li>Computadoras</li>
-    </ul>
-
-    <script src="dom.js"></script>
+    <script src="access.js"></script>
 </body>
 
 </html>
