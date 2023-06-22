@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,7 +24,7 @@
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
     </header>
-
+    <!--menú lateral-->
     <div class="menu__side" id="menu_side">
 
         <div class="name__page">
@@ -50,15 +51,9 @@
 
             <a href="#">
                 <div class="option">
-                    <i class="fa fa-fire" title="Hot Promos"></i>
-                    <h4>Hot Promos</h4>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="option">
-                    <i class="fa fa-bell" title="Pedido"></i>
+                    <i class="fa fa-bell campana" title="Pedido"></i>
                     <h4>Orden</h4>
+                    <div id="numero"></div>
                 </div>
             </a>
         </div>
@@ -66,18 +61,31 @@
     </div>
 
     <main>
+        <!--<div id="contenedor_pedidos">
+            <div class="info_pedido" id="informacion_pedido">
+                <h2>Orden:</h2>
+                <p class="x" id="x">x</p>
+            </div>
+
+            <div class="productosOrdenados"></div>
+            <div class="total"></div>
+            <button>Enviar</button>
+        </div>-->
+
         <!--contenido del menú de comidas-->
 
         <div class="title-cards">
             <h2>MENÚ</h2>
-            <div class="btn-sect">
-                |
-                <a href="#comidad" class="btn">Comidas</a>
-                |
-                <a href="#Bebidas" class="btn">Bebidas</a>
-                |
+            <div class="head2">
+                <div class="btn-sect">
+                    <!--esta sección llevará especificamente al comensal a las 
+                    secciones de comida que busca-->
+                    <a href="#comidas">Comidas</a>
+                    <a href="#Bebidas">Bebidas</a>
+                    <a href="#Promos">🔥Promos!</a>
+                </div>
             </div>
-            <section id="comidad">
+            <section id="comidas">
                 <div class="line"></div>
                 <h4>Comidas</h4>
                 <div class="line2"></div>
@@ -86,7 +94,7 @@
         </div>
         <div class="container-card">
             <!--card con item 1-->
-            <div class="card">
+            <div class="card" id="product_content">
                 <figure>
                     <img src="img/platillos/comida/Imagen de WhatsApp 2023-06-16 a las 12.09.07.jpg">
                 </figure>
@@ -114,7 +122,7 @@
                     <p>Pechuga de Pollo Desmechada,
                         Tomate, Queso Mozzrella, Lechuga, y Mayonesa.</p>
                     <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#">Order Now!</a>
+                    <a href="#" id="ordenar">Order Now!</a>
                 </div>
             </div>
             <!--card con item 3-->
@@ -195,6 +203,78 @@
                     </p>
                     <a href="#">Order Now!</a>
                 </div>
+            </div>
+        </div>
+        <section id="Promos">
+            <div class="title-cards">
+                <h4>🔥 <strong>HOT PROMOS!</strong> 🔥</h4>
+                <div class="line2"></div>
+            </div>
+        </section>
+        <div class="container-card">
+            <!--card con item 1 de bebidas-->
+            <div class="card">
+                <figure>
+                    <img src="img/borra.jpg">
+                </figure>
+                <div class="contenido-card col-4">
+                    <h3>Cervezas Nacionales</h3>
+                    <div class="precio-plato-carta">
+                        <span>$17.00</span>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias..
+                    </p>
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+            <!--card con item 2 de bebidas-->
+            <div class="card">
+                <figure>
+                    <img src="img/sara-cervera-xB0Kr0D0C8Y-unsplash-1-scaled-e1637796239592-1024x1024.jpg">
+                </figure>
+                <div class="contenido-card col-4">
+                    <h3>Smoothies</h3>
+                    <div class="precio-plato-carta">
+                        <span>$17.00</span>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias..
+                    </p>
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+            <!--card con item 3 de bebidas-->
+            <div class="card">
+                <figure>
+                    <img
+                        src="https://mejorconsalud.as.com/wp-content/uploads/2020/12/limonada-coco.jpg?auto=webp&quality=45&width=1920&crop=16:9,smart,safe">
+                </figure>
+                <div class="contenido-card col-4">
+                    <h3>Limonada de COCO</h3>
+                    <div class="precio-plato-carta">
+                        <span>$17.00</span>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias..
+                    </p>
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+        </div>
+        <!--contenedor de logos de las tecnologías utilizadas en esta página-->
+        <div class="contenedor_logos">
+            <div class="logo">
+                <i class='bx bxl-html5' ></i>
+            </div>
+            <div class="logo">
+                <i class='bx bxl-css3' ></i>
+            </div>
+            <div class="logo">
+                <i class='bx bxl-javascript' ></i>
             </div>
         </div>
 

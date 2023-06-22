@@ -26,6 +26,7 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
+    gap: 15%;
     z-index: 200;
 }
 
@@ -99,7 +100,7 @@ header {
 }
 
 .options__menu a:hover {
-    color: #ffffffb2;
+    color: #ffffff;
 }
 
 .options__menu .option {
@@ -119,24 +120,18 @@ header {
     font-weight: 300;
     cursor: pointer;
 }
-
-a.selected {
-    color: #fff;
+a.selected, a.selected:hover{
+    color: #ffffff;
+    transition: 0.5s;
 }
-
-.selected:before {
-    content: '';
-    width: 3px;
-    height: 80%;
-    background: white;
+/*boton de ordenes o pedidos*/
+a.campana {
     position: absolute;
-    top: 10%;
-    left: -30px;
+    top:  14px;
+    cursor: pointer;
 }
-.texto-footer {
-    color: var(--clr-main-light);
-    font-size: .85rem;
-}
+
+
 
 /*Clases para usar en JavaScript*/
 
@@ -161,16 +156,30 @@ a.selected {
 }
 
 /*Main contenido*/
-.btn a {
+
+/*seccion de bienvenida*/
+.btn-sect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-sect a {
     display: inline-block;
     padding: 10px;
     margin-top: 10px;
     text-decoration: none;
     color: #C69749;
     border: 1px solid #C69749;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: all 400ms ease;
     margin-bottom: 5px;
+    margin: 0 10px;
+}
+.btn-sect a:hover {
+    background: #C69749;
+    color: #fff;
 }
 
 .line {
@@ -200,7 +209,7 @@ a.selected {
     width: 100%;
     max-width: 1080px;
     margin: auto;
-    padding: 20px;
+    padding: 5px;
     margin-top: 20px;
     text-align: center;
     color: black;
@@ -291,6 +300,26 @@ span {
 
 /*Fin-Cards*/
 
+/*contenedor de logos*/
+.contenedor_logos{
+   position: relative;
+   object-fit: contain;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 15px 20px;
+   gap: 4rem;
+}
+.contenedor_logos i{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #959595;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    font-size: 3.1rem;
+}
+
 /*Footer*/
 .footer {
     flex-direction: column-reverse;
@@ -321,3 +350,4 @@ span {
     background: #C69749;
     color: white;
 }
+/*apartado de ordenes realizadas prximamente X)*/

@@ -39,3 +39,5 @@ window.addEventListener("resize", function(){
     }
 
 });
+
+//evento al hace clic sobre el bontón ordenar ahora (Order Now!)
