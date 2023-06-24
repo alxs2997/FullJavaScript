@@ -139,9 +139,9 @@ window.addEventListener("load", () => {
     let mostraProductos = document.getElementById('mostrarProductos')
     mostraProductos.innerHTML = ''
     for (let i = 0; i < productos.length; i++) {
-        mostraProductos.innerHTML += `<div class="contenedorProductos"><img src="${productos[i].urlImagen}"> <div class="informacion"><p>${productos[i].nombre}</p>
-        <p class="precio"><span>Precio: $${productos[i].valor}</span></p> <p>${productos[i].descripcion}
-        </p>Existencia: ${productos[i].existencia}<p></p></div></div>`
+        mostraProductos.innerHTML += `<div class="contenedorProductos"><img src="${productos[i].urlImagen}"> <div class="informacion"><h3>${productos[i].nombre}</h3>
+        <div class="precio-plato"><span>$${productos[i].valor}</span></div><p>${productos[i].descripcion}</p>
+        <h4>Existencia: ${productos[i].existencia}</h4><p></p></div></div>`
     }
 })
 
