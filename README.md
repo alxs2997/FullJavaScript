@@ -18,6 +18,10 @@ Imagen de referencia, ahora se almacena dentro de la carpeta Admin.
 Ejemplificando el uso de localStorage y como se guardan los archivos en formato JSON.
 ![image](https://github.com/alxs2997/FullJavaScript/assets/98421465/2318bad0-98bc-437c-bdd7-59cdcab6ac86)
 
+Del lado del front-end haciendo que se agreguen productos al modal. estilo carrito para que el cliente pueda ver su orden o pedido:
+![image](https://github.com/alxs2997/FullJavaScript/assets/98421465/f802db5a-849e-4c51-aeae-660750607bb4)
+
+
 
 
 
