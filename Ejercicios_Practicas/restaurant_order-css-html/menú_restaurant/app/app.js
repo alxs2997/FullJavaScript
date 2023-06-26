@@ -71,7 +71,6 @@ function deleteProduct(e) {
             }
         });
 
-
         //elimina del arreglo de OderThings por el data-id
         OderThings = OderThings.filter(product => product.id !== productId);
     }
