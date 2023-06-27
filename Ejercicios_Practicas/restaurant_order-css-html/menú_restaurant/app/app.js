@@ -39,11 +39,28 @@ window.addEventListener("resize", function () {
     }
 
 });
+//Elemento seleccionado con la clase active en el sidebar
+
+$(function() {
+  
+    // elementos de la lista
+    var sideSelect = $(".menu__side div a"); 
+  
+    // manejador de click sobre todos los elementos
+    sideSelect.click(function() {
+       // eliminamos active de todos los elementos
+       sideSelect.removeClass("selected");
+       // activamos el elemento clicado.
+       $(this).addClass("selected");
+    });
+  
+  });
 
 //evento al hace clic sobre el bontón ordenar ahora (Order Now!)
 let allContainerOrden = document.querySelector('.container-card');
 let containerOrden = document.querySelector('.mostrar');
 let priceTotal = document.querySelector('.total-price');
+let vaciarCarritoBtn = document.querySelector('.limpiar');
 
 let OderThings = [];
 
@@ -56,12 +73,14 @@ function loadEventListeners() {
     allContainerOrden.addEventListener('click', addProductsToOrder);
     //elimina productos del carrito
     containerOrden.addEventListener('click', deleteProduct);
+    //vaciar carrito de compras
+    vaciarCarritoBtn.addEventListener('click', vaciarcarrito);
 }
 
 //elimina productos del carrito
 function deleteProduct(e) {
     if (e.target.classList.contains('delete-product')) {
-        const productId = e.target.getAttribute('data-id');
+        const deleteId = e.target.getAttribute('data-id');
 
         OderThings.forEach(value => {
             if (value.id === deleteId) {
@@ -72,7 +91,7 @@ function deleteProduct(e) {
         });
 
         //elimina del arreglo de OderThings por el data-id
-        OderThings = OderThings.filter(product => product.id !== productId);
+        OderThings = OderThings.filter(product => product.id !== deleteId);
     }
     loadHTML(); //iterar sobre el carrito y mostrar su html
 }
@@ -143,3 +162,14 @@ function loadHTML() {
 function cleanHTML() {
     containerOrden.innerHTML = ''
     }
+
+
+//vaciar carrito de compras
+function vaciarcarrito() {
+    OderThings = []; //reseteamos el arreglo
+    cleanHTML(); //eliminamos todo el html
+    totalPrice = 0;
+    priceTotal.innerHTML = totalPrice;
+}
+
+

@@ -14,6 +14,26 @@ body {
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
+/*Estilos para el scroll*/
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #33383b;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #C69749;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid black;
+    /* creates padding around scroll thumb */
+}
+
 main {
     padding: 20px;
 }
@@ -87,7 +107,7 @@ header {
 .modalDialog>div {
     width: 700px;
     position: relative;
-    margin: 10% auto;
+    margin: 2% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #fff;
@@ -118,13 +138,17 @@ header {
 .close:hover {
     background: #C69749;
 }
-.modalDialog .limpiador{
+
+.modalDialog .limpiador {
     padding: 10px;
     margin: 10px;
     margin-bottom: 5px;
     margin: 0 10px;
 }
-.modalDialog .limpiar{
+
+.modalDialog .limpiar {
+    display: flex;
+    justify-content: center;
     color: #C69749;
     text-decoration: none;
     font-size: 12px;
@@ -136,52 +160,82 @@ header {
     margin-bottom: 5px;
     margin: 0 10px;
 }
-.modalDialog .limpiar:hover{
+
+.modalDialog .limpiar:hover {
+    display: flex;
+    justify-content: center;
     background: #C69749;
     color: #fff;
 }
 
 /*mostrar ordenes en modal*/
-.mostrar .item img{
+.mostrar {
+    height: 450px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/*Estilos para el scroll del modal*/
+.mostrar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.mostrar::-webkit-scrollbar-track {
+    background: #33383b;
+}
+
+.mostrar::-webkit-scrollbar-thumb {
+    background-color: #C69749;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.mostrar .item img {
     max-width: 190px;
 }
 
-.mostrar .item{
+.mostrar .item {
     display: flex;
     align-items: center;
     border-bottom: solid 2px #33383b;
 }
-.mostrar .item .item-content{
-    margin: 0 19px;
-    width: 201px;
+
+.mostrar .item .item-content {
+    margin: 0 15px;
+    width: 390px;
 }
-.mostrar .item .item-content h5{
+
+.mostrar .item .item-content h5 {
     margin: 0;
     font-size: 25px;
     font-weight: 400;
     font-family: system-ui;
     color: #C69749
 }
-.mostrar .item .item-content p{
+
+.mostrar .item .item-content p {
     margin: 0;
     font-size: 15px;
     font-weight: 400;
     font-family: system-ui;
 }
-.mostrar .item .item-content h6{
+
+.mostrar .item .item-content h6 {
     margin: 0;
     font-size: 20px;
     font-weight: 400;
     font-family: system-ui;
 }
-.mostrar .item span{
+
+.mostrar .item span {
     padding: 0px 5px;
-    border-radius: 20%;
+    border-radius: 3%;
     color: #ff0000;
     font-family: system-ui;
     cursor: pointer;
 }
-.mostrar .item span:hover{
+
+.mostrar .item span:hover {
     background-color: rgb(225, 65, 65);
     padding: 0px 5px;
     border-radius: 20%;
@@ -189,12 +243,15 @@ header {
     font-family: system-ui;
     cursor: pointer;
 }
-.mostrar h3{
+
+.mostrar h3 {
     margin-bottom: 0;
 }
-.mostrar .item .item-content h5.order-price{
+
+.mostrar .item .item-content h5.order-price {
     font-weight: 700;
 }
+
 /*Fin Modal Trigger*/
 
 /*Ocultar scroll para chrome, safari y opera*/
@@ -259,6 +316,28 @@ header {
 a.selected,
 a.selected:hover {
     color: #ffffff;
+    transition: 0.5s;
+}
+
+a .selected::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #C69749;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+a .selected:hover::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #C69749;
+    left: 0;
+    top: 0;
     transition: 0.5s;
 }
 
@@ -346,10 +425,10 @@ a.campana {
 
 /*Iniacia Cards*/
 .container-card {
-    width: 100%;
+    padding-top: 20px;
     display: flex;
-    max-width: 1100px;
-    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .title-cards {
@@ -364,13 +443,15 @@ a.campana {
 
 .card {
     width: 100%;
-    margin: 20px;
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     transition: all 400ms ease-out;
     cursor: default;
+    max-width: 500px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 
@@ -381,7 +462,7 @@ a.campana {
 
 .card img {
     width: 100%;
-    height: 210px;
+    height: 300px;
 }
 
 .precio-plato-carta {
@@ -395,6 +476,7 @@ a.campana {
 span {
     color: #C69749;
 }
+
 strong {
     color: #C69749;
 }
