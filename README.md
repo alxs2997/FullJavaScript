@@ -23,8 +23,11 @@ Del lado del front-end haciendo que se agreguen productos al modal. estilo carri
 
 Cumpliendo con los detalles del diseño y comprobando que se puedan eliminar productos y limpiar la lista del modal, añadiendo barra de desplazamiento personalizada.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w7QDQZ7Riqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+
+
+https://github.com/alxs2997/FullJavaScript/assets/98421465/e43db6a4-0c8a-4f1b-bbdb-3cb629a1a011
 
 
 
