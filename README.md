@@ -21,6 +21,9 @@ Ejemplificando el uso de localStorage y como se guardan los archivos en formato 
 Del lado del front-end haciendo que se agreguen productos al modal. estilo carrito para que el cliente pueda ver su orden o pedido:
 ![image](https://github.com/alxs2997/FullJavaScript/assets/98421465/f802db5a-849e-4c51-aeae-660750607bb4)
 
+Cumpliendo con los detalles del diseño y comprobando que se puedan eliminar productos y limpiar la lista del modal, añadiendo barra de desplazamiento personalizada.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w7QDQZ7Riqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
