@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script>
+        var peticionHTTP;
+
+        //inicializad XMLHttpRequest:
+
+        function inicializar_xhr() {
+            if (window.XMLHttpRequest) {
+                peticionHTTP = new XMLHttpRequest();
+            } else peticionHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+                 
+            }
+
+        //ESTA FUNCION SERA INVOCADA CUANDO EL SERVIDOR RESPONDA:
+        function realizarPeticion(url, metodo, funcion) {
+            //inicializar_xhr();
+            //definir y asignar funcion de respuesta:
+            //OJO onreadystatechange debe escribirse en minuscula:
+            peticionHTTP.onreadystatechange = funcion;
+            //realizar peticion:
+            peticionHTTP.open(metodo, url, true);
+            peticionHTTP.send(null);
+        }
+
+        //Aquí queremos que se inicialice primero el objeto y luego realizaremos la petición:
+        function descargarArchivo(){
+            inicializar_xhr();
+            realizarPeticion('archivo.txt', 'GET', fucnAccion);
+        } 
+        //se va a ejecutar cuando el servidor responda:
+
+        function fucnAccion(){
+            alert("actuando");
+            if (peticionHTTP.readyState == 4) 
+                if (peticionHTTP.status == 200) {
+                    document.write(peticionHTTP.responseText);
+            }
+        }
+
+        //cuando ha cargado la pagina:
+        window.onload = descargarArchivo;
+        /*if (window.XMLHttpRequest) {
+            // code for modern browsers
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for old IE browsers
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }*/
+        </script>
+</head>
+<body>
+    <!--Javascript asincrono y xml (Asincronus Javascript And Xml)-->
+    <h1>Asincronus Javascript And Xml-JSON</h1>
+
+
+
+   
+</body>
+</html>
