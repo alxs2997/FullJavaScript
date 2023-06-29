@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud AJAX Example 2</title>
+</head>
+<body>
+    <!--si necesidad de utilizar jquery-->
+    <button id="boton">Cargar Sitio</button>
+
+    <div id="response">
+
+    </div>
+       
+    <script>
+         function ajax(){
+            const http = new XMLHttpRequest();
+            const url = 'http://localhost/AJAX/example2/pagina.html';
+
+            http.onreadystatechange = function(){
+                //si se cumple esta condiciones mi solicitud se completo exitosamente
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    //document.getElementById('response').innerHTML = this.responseText;
+                }
+
+                http.open('GET', url);
+                http.send(null);
+            }
+        }
+
+        document.getElementById('boton').addEventListener('click', function(){
+            ajax();
+        });
+    </script>
+</body>
+</html>
