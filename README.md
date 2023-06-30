@@ -23,11 +23,18 @@ Del lado del front-end haciendo que se agreguen productos al modal. estilo carri
 
 Cumpliendo con los detalles del diseño y comprobando que se puedan eliminar productos y limpiar la lista del modal, añadiendo barra de desplazamiento personalizada.
 
-
-
-
-
 https://github.com/alxs2997/FullJavaScript/assets/98421465/e43db6a4-0c8a-4f1b-bbdb-3cb629a1a011
+
+En el apartado de uso de AJAX:
+
+Trabajé una tabla que se rellena con datos desde un archivo .JSON, esto sirve para colocar elementos y parsearlos cuando queremos consumir una API:
+![image](https://github.com/alxs2997/FullJavaScript/assets/98421465/9427b21f-bab4-4341-a6f2-b2fd5fca5de2)
+
+
+https://github.com/alxs2997/FullJavaScript/assets/98421465/49050ead-523b-495f-af19-c75642634ac6
+
+
+
 
 
 
