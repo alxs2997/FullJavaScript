@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+
+tbody th {
+    height: 150px;
+}
+
+.circular--square img {
+    width: auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.circular--square {
+    border-radius: 50%;
+}
+
+.circular--square {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}

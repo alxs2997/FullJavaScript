@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de llenar una tabla con AJAX</title>
+
+    <!--Importar estilo css-->
+    <link rel="stylesheet" href="stylo.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="section">
+            <button class="btn" id="boton">Json</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre:</th>
+                        <th>Foto:</th>
+                        <th>Edad:</th>
+                        <th>Salario:</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resp">
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    <script src="ajax.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+[
+    {
+        "nombre": "Juan Martinez",
+        "foto": "https://i.ibb.co/QMm8wH1/chica1.jpg",
+        "salario": "1000",
+        "edad": "23"
+    },
+    {
+        "nombre": "Pedro Porro",
+        "edad": "20",
+        "foto": "https://i.ibb.co/QMm8wH1/chica1.jpg",
+        "salario": "2000"
+    },
+    {
+        "nombre": "Maria Lopez",
+        "edad": "30",
+        "foto": "https://i.ibb.co/QMm8wH1/chica1.jpg",
+        "salario": "3000"
+    }
+    
+]
