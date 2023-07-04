@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacenamiento Local</title>
+
+    <style>
+    *{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>Almacenamiento Local con HTML5</h1>
+
+
+    <label>Ingrese un texto</label><br>
+    <input type="text" id="textoGuardar">
+    <br>
+    <label>Texto Recuperado</label><br>
+    <input type="text" id="verRecuperado">
+    <br>
+    <input type="button" name="" value="Guardar" onclick="Guardar()">
+    <input type="button" name="" value="ver Datos" onclick="verDatos()">
+
+    <script>
+      function Guardar(){
+          var texto = document.getElementById("textoGuardar").value;
+          localStorage.setItem("textoGuardar", texto);
+      }
+        function verDatos(){
+            document.getElementById("verRecuperado").value = localStorage.getItem("textoGuardar");
+        }
+    </script>
+
+</body>
+</html>

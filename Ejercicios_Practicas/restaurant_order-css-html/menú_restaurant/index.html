@@ -14,6 +14,7 @@
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -35,14 +36,14 @@
 
         <div class="options__menu">
 
-            <a href="#">
+            <a href="#Inicio">
                 <div class="option">
                     <i class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>
                 </div>
             </a>
 
-            <a href="#" class="selected">
+            <a href="#menú" class="selected">
                 <div class="option">
                     <i class="fa fa-square-pen" title="Menú"></i>
                     <h4>Menú</h4>
@@ -57,7 +58,50 @@
         </div>
 
     </div>
-
+    <section id="Inicio">
+        <!--carrousel-->
+        <div class="carousel">
+            <input type="radio" name="carousel" id="slide-btn-1" class="slide-btn" onclick="setInt();" checked />
+            <input type="radio" name="carousel" id="slide-btn-2" class="slide-btn" onclick="setInt();" />
+            <input type="radio" name="carousel" id="slide-btn-3" class="slide-btn" onclick="setInt();" />
+            <input type="radio" name="carousel" id="slide-btn-4" class="slide-btn" onclick="setInt();" />
+            <input type="radio" name="carousel" id="slide-btn-5" class="slide-btn" onclick="setInt();" />
+            <div class="slide one parallax-effect">
+            </div><!-- add "parallax-effect" class to each element that it applies -->
+            <div class="slide two parallax-effect">
+            </div>
+            <div class="slide three parallax-effect">
+            </div>
+            <div class="slide four parallax-effect">
+            </div>
+            <div class="slide five parallax-effect">
+            </div>
+            <div class="labels">
+                <label for="slide-btn-1"></label>
+                <label for="slide-btn-2"></label>
+                <label for="slide-btn-3"></label>
+                <label for="slide-btn-4"></label>
+                <label for="slide-btn-5"></label>
+            </div>
+        </div>
+        <!--fin de carrousel-->
+        <!--contenido de la página-->
+        <div class="contenedor_logos">
+            <div class="logo">
+                <i class='bx bxs-group'></i>
+                <h1>Equipo</h1>
+            </div>
+            <div class="logo">
+                <i class='bx bx-file-find' ></i>
+                <h1>Misión</h1>
+            </div>
+            <div class="logo">
+                <i class='bx bxs-star' ></i>
+                <h1>Visión</h1>
+            </div>
+        </div>
+        <!--fin de contenido de la página-->
+    </section>
     <main>
         <!--modal de ordenes-->
         <div id="openModal" class="modalDialog">
@@ -85,167 +129,168 @@
         </div>
 
         <!--contenido del menú de comidas-->
-
-        <div class="title-cards">
-            <h2>MENÚ</h2>
-            <div class="head2">
-                <div class="btn-sect">
-                    <!--esta sección llevará especificamente al comensal a las 
+        <section id="menú">
+            <div class="title-cards">
+                <h2>MENÚ</h2>
+                <div class="head2">
+                    <div class="btn-sect">
+                        <!--esta sección llevará especificamente al comensal a las 
                     secciones de comida que busca-->
-                    <a href="#Promos">🔥Promos!</a>
-                </div>
-                <div class="line"></div>
-                <div class="line2"></div>
+                        <a href="#Promos">🔥Promos!</a>
+                    </div>
+                    <div class="line"></div>
+                    <div class="line2"></div>
 
-            </div>
-        </div>
-        <div class="container-card">
-            <!--card con item 1-->
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img
-                            src="https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.com.do/files/KingJr-juguetes-JL-550x550-combo.png">
-                    </div>
-                    <h3>Combo Kids</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>6.20</span>
-                    </div>
-                    <p>Incluye: 1 Hamburguesa, 5 tequeños,
-                        1 papa french y 1 refresco.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="1" id="ordenar">Order Now!</a>
                 </div>
             </div>
-            <!--card con item 2-->
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img
-                            src="https://img.freepik.com/fotos-premium/hamburguesa-tapa-dorada-dorada-fondo-negro_582637-3357.jpg">
+            <div class="container-card">
+                <!--card con item 1-->
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img
+                                src="https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.com.do/files/KingJr-juguetes-JL-550x550-combo.png">
+                        </div>
+                        <h3>Combo Kids</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>6.20</span>
+                        </div>
+                        <p>Incluye: 1 Hamburguesa, 5 tequeños,
+                            1 papa french y 1 refresco.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="1" id="ordenar">Order Now!</a>
                     </div>
-                    <h3>Hamburguesa Full Toro Max</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>7.00</span>
+                </div>
+                <!--card con item 2-->
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img
+                                src="https://img.freepik.com/fotos-premium/hamburguesa-tapa-dorada-dorada-fondo-negro_582637-3357.jpg">
+                        </div>
+                        <h3>Hamburguesa Full Toro Max</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>7.00</span>
+                        </div>
+                        <p>Incluye: 1 Hamburguesa, 10 tequeños,
+                            2 papa french más aderezos y 1 refresco.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="2" id="ordenar">Order Now!</a>
                     </div>
-                    <p>Incluye: 1 Hamburguesa, 10 tequeños,
-                        2 papa french más aderezos y 1 refresco.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="2" id="ordenar">Order Now!</a>
+                </div>
+                <!--card con item 3-->
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img
+                                src="https://scontent.fsal11-1.fna.fbcdn.net/v/t1.6435-9/176308927_102773381960256_4151134893481792631_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=FeKKmPpwNdoAX9BTs-J&_nc_ht=scontent.fsal11-1.fna&oh=00_AfB3KPmehorjC6nMh_Jj62cQqsrXRjK7OJuMVm9dKghqAA&oe=64C124AC">
+                        </div>
+                        <h3>Monster Burguer Santana</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>12.78</span>
+                        </div>
+                        <p>Incluye: 1 Hamburguesa, 12 tequeños,
+                            4 papa french más aderezos y 2 refrescos.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="3" id="ordenar">Order Now!</a>
+                    </div>
+                </div>
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/022/911/694/original/cute-cartoon-burger-icon-free-png.png">
+                        </div>
+                        <h3>Hamburguesa la Grosera 3X1 solo para llevar</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>15.00</span>
+                        </div>
+                        <p>Cuarto de Libra carne de res, American Stracy,
+                            Lechuga, Tomate, Cebolla, Pepinillos, Salsa Big Mac.</p>
+                        </p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="7" id="ordenar">Order Now!</a>
+                    </div>
+                </div>
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img src="https://tacobell.cr/Images/Products/111003_133268316722489693.png">
+                        </div>
+                        <h3>Combo wrapper pollo y jamón 2X1</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>7.60</span>
+                        </div>
+                        <p>Wrap de pollo con jamón, queso cheddar,
+                            Lechuga, Tajín y salsa de pavo.
+                        </p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="8" id="ordenar">Order Now!</a>
+                    </div>
+                </div>
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img
+                                src="https://img1.wsimg.com/isteam/ip/acdc5503-8ec0-4d25-aed0-42bc06fedec3/Combo%20%2302%20(Burrito%201_2%20Lb%20Crunchy).png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:360,cg:true">
+                        </div>
+                        <h3>Crispy Chicken Burrito 2X1</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>5.90</span>
+                        </div>
+                        <p>Burrito con Jamón y pollo, aderezos y más.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="9" id="ordenar">Order Now!</a>
+                    </div>
+                </div>
+                <!--card con item 3 bebidas-->
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img src="https://static.mercadonegro.pe/wp-content/uploads/2019/08/22193130/borra.jpg">
+                        </div>
+                        <h3>Variedad de Cervezas Nacionales</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>2.50</span>
+                        </div>
+                        <p>Pilsener, Golden, Golden Extra, Suprema y Regia.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="4" id="ordenar">Order Now!</a>
+                    </div>
+                </div>
+                <!--card con item 2 de bebidas-->
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img
+                                src="https://media.ambito.com/p/9f0c42c7138994b0c89df33545cf6320/adjuntos/239/imagenes/040/476/0040476632/licuados-frutalesjpg.jpg">
+                        </div>
+                        <h3>Licuados de Frutas Tropicales</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>3.50</span>
+                        </div>
+                        <p>Manzana,Fresa,Tamarindo,Kiwi, Coco y Leche, Banano.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="5" id="ordenar">Order Now!</a>
+                    </div>
+                </div>
+                <!--card con item 3 de bebidas-->
+                <div class="card" id="product_content">
+                    <div class="contenido-card">
+                        <div>
+                            <img src="https://okdiario.com/img/2022/06/15/limonada-coco.jpg">
+                        </div>
+                        <h3>Limonada de Coco</h3>
+                        <div class="precio-plato-carta">
+                            <strong>$</strong><span>5.00</span>
+                        </div>
+                        <p>Licuado de coco y vainilla con zumo de limón.</p>
+                        <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
+                        <a href="#" class="btn-ordenar-content" data-id="6" id="ordenar">Order Now!</a>
+                    </div>
                 </div>
             </div>
-            <!--card con item 3-->
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img
-                            src="https://scontent.fsal11-1.fna.fbcdn.net/v/t1.6435-9/176308927_102773381960256_4151134893481792631_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=FeKKmPpwNdoAX9BTs-J&_nc_ht=scontent.fsal11-1.fna&oh=00_AfB3KPmehorjC6nMh_Jj62cQqsrXRjK7OJuMVm9dKghqAA&oe=64C124AC">
-                    </div>
-                    <h3>Monster Burguer Santana</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>12.78</span>
-                    </div>
-                    <p>Incluye: 1 Hamburguesa, 12 tequeños,
-                        4 papa french más aderezos y 2 refrescos.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="3" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img
-                            src="https://static.vecteezy.com/system/resources/previews/022/911/694/original/cute-cartoon-burger-icon-free-png.png">
-                    </div>
-                    <h3>Hamburguesa la Grosera 3X1 solo para llevar</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>15.00</span>
-                    </div>
-                    <p>Cuarto de Libra carne de res, American Stracy,
-                        Lechuga, Tomate, Cebolla, Pepinillos, Salsa Big Mac.</p>
-                    </p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="7" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img src="https://tacobell.cr/Images/Products/111003_133268316722489693.png">
-                    </div>
-                    <h3>Combo wrapper pollo y jamón 2X1</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>7.60</span>
-                    </div>
-                    <p>Wrap de pollo con jamón, queso cheddar,
-                        Lechuga, Tajín y salsa de pavo.
-                    </p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="8" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img
-                            src="https://img1.wsimg.com/isteam/ip/acdc5503-8ec0-4d25-aed0-42bc06fedec3/Combo%20%2302%20(Burrito%201_2%20Lb%20Crunchy).png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:360,cg:true">
-                    </div>
-                    <h3>Crispy Chicken Burrito 2X1</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>5.90</span>
-                    </div>
-                    <p>Burrito con Jamón y pollo, aderezos y más.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="9" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-             <!--card con item 3 bebidas-->
-             <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img src="https://static.mercadonegro.pe/wp-content/uploads/2019/08/22193130/borra.jpg">
-                    </div>
-                    <h3>Variedad de Cervezas Nacionales</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>2.50</span>
-                    </div>
-                    <p>Pilsener, Golden, Golden Extra, Suprema y Regia.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="4" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-            <!--card con item 2 de bebidas-->
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img
-                            src="https://media.ambito.com/p/9f0c42c7138994b0c89df33545cf6320/adjuntos/239/imagenes/040/476/0040476632/licuados-frutalesjpg.jpg">
-                    </div>
-                    <h3>Licuados de Frutas Tropicales</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>3.50</span>
-                    </div>
-                    <p>Manzana,Fresa,Tamarindo,Kiwi, Coco y Leche, Banano.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="5" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-            <!--card con item 3 de bebidas-->
-            <div class="card" id="product_content">
-                <div class="contenido-card">
-                    <div>
-                        <img src="https://okdiario.com/img/2022/06/15/limonada-coco.jpg">
-                    </div>
-                    <h3>Limonada de Coco</h3>
-                    <div class="precio-plato-carta">
-                        <strong>$</strong><span>5.00</span>
-                    </div>
-                    <p>Licuado de coco y vainilla con zumo de limón.</p>
-                    <!--botón de ordenar que almacena el pedido en el apartado ordenes-->
-                    <a href="#" class="btn-ordenar-content" data-id="6" id="ordenar">Order Now!</a>
-                </div>
-            </div>
-        </div>
+        </section>
         <section id="Promos">
             <div class="title-cards">
                 <h4>🔥 <strong>HOT PROMOS!</strong> 🔥</h4>
@@ -320,6 +365,8 @@
         </div>
 
     </footer>
+    <!--script de la página-->
+    <script src="/js/parallax-effect.min.js"></script><!-- ALWAYS LOAD THIS LIBRARY AT THE END OF THE HTML DOCUMENT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="app/app.js"></script>
 </body>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@
 
 body {
     margin-left: 80px;
-    margin-top: 80px;
+    margin-top: 55px;
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -191,7 +192,8 @@ header {
 }
 
 .mostrar .item img {
-    max-width: 190px;
+    max-width: 150px;
+    border-radius: 5px;
 }
 
 .mostrar .item {
@@ -253,6 +255,93 @@ header {
 }
 
 /*Fin Modal Trigger*/
+#Inicio{
+    background-color: #5c5c5c;
+}
+/*Estilos para el carrousel*/
+
+.slide-btn {
+    display: none;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slide {
+    float: left;
+    height: 100%;
+    width: 0;
+    transition: width .3s linear;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.slide > * {
+    transition: transform .15s linear;
+    transform: scale(0);
+}
+.labels {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.labels label {
+    display: inline-block;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    margin: .5vmin 2vmin;
+    border: 3px solid #C69749;
+}
+.carousel .one,
+.carousel .two,
+.carousel .three,
+.carousel .four,
+.carousel .five {
+    background-position: center center;
+    background-size:  cover;
+}
+.carousel .one {
+    background-image: url(https:i.ibb.co/wJQ048y/monster-burguer.png);
+}
+.carousel .two {
+    background-image: url(https://gobuff.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faboutus.a3233c23.png&w=1920&q=75);
+}
+.carousel .three {
+    background-image: url(https://media.admagazine.com/photos/618a5d11532cae908aaf27ab/master/w_1600%2Cc_limit/96644.jpg);
+}
+.carousel .four {
+    background-image: url(https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/comer/top-de-gastronomia/los-restaurantes-mas-antiguos-de-espana/gr-cms-media-featured_images-none-759f762b-7965-41cd-a979-da49509e205d-1.jpg);
+}
+.carousel .five {
+    background-image: url(https://blog.mesa247.pe/wp-content/uploads/2022/04/restaurantes.jpeg);
+}
+#slide-btn-1:checked ~ .one,
+#slide-btn-2:checked ~ .two,
+#slide-btn-3:checked ~ .three,
+#slide-btn-4:checked ~ .four,
+#slide-btn-5:checked ~ .five {
+    width: 100%;
+}
+#slide-btn-1:checked ~ .one > *,
+#slide-btn-2:checked ~ .two > *,
+#slide-btn-3:checked ~ .three > *,
+#slide-btn-4:checked ~ .four > *,
+#slide-btn-5:checked ~ .five > * {
+    transform: scale(1);
+}
+#slide-btn-1:checked ~ .labels label[for="slide-btn-1"],
+#slide-btn-2:checked ~ .labels label[for="slide-btn-2"],
+#slide-btn-3:checked ~ .labels label[for="slide-btn-3"],
+#slide-btn-4:checked ~ .labels label[for="slide-btn-4"],
+#slide-btn-5:checked ~ .labels label[for="slide-btn-5"] {
+    background-color: #C69749;
+}
+/*Fin del estilos del carrousel*/
 
 /*Ocultar scroll para chrome, safari y opera*/
 .menu__side::-webkit-scrollbar {
@@ -443,7 +532,7 @@ a.campana {
 
 .card {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 30px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
@@ -463,6 +552,7 @@ a.campana {
 .card img {
     width: 100%;
     height: 300px;
+    border-radius: 30px 30px 5px 5px;
 }
 
 .precio-plato-carta {
@@ -552,6 +642,15 @@ strong {
     letter-spacing: 1px;
     border-radius: 3px;
     font-size: 3.1rem;
+}
+.contenedor_logos h1{
+    color: #C69749;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /*Fin contenedor de logos*/
